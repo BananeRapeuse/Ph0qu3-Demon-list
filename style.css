@@ -1,78 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display:wght@400;700&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #121212;
+    padding: 0;
+    font-family: "Momo Trust Display", sans-serif;
     color: white;
+
+    /* Background image */
+    background: url("https://raw.githubusercontent.com/BananeRapeuse/Ph0qu3-Demon-list/refs/heads/main/src/IMG_1132.png") no-repeat center center fixed;
+    background-size: cover;
+
+    /* Dark overlay */
+    position: relative;
 }
 
-header {
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #1c1c1c;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* assombrit */
+    z-index: -1;
 }
 
-header .logo {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-header nav a {
-    margin-left: 20px;
-    color: #ccc;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-header nav a:hover {
-    color: white;
-}
-
-.list {
+/* Container général */
+.container {
     width: 80%;
-    margin: 40px auto;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
 }
 
-.list h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
+/* Carte demon */
 .demon-card {
-    background: #1a1a1a;
-    padding: 15px 20px;
+    padding: 18px 20px;
+    background: rgba(0, 0, 0, 0.55);
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.rank {
-    color: #ffa726;
-    font-weight: bold;
-    width: 50px;
+.demon-card:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.name {
-    font-size: 18px;
-    font-weight: 600;
-    flex: 1;
+/* Partie texte centrée */
+.center-box {
+    width: 70%;
+    margin: 80px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 12px;
+    text-align: center;
 }
 
-.creator {
-    color: #aaa;
-    margin-right: 20px;
-}
-
-.video {
-    font-size: 20px;
-    color: #ff5252;
+a {
+    color: #77B2FF;
     text-decoration: none;
 }
-
-.video:hover {
-    color: #ff7979;
+a:hover {
+    text-decoration: underline;
 }
